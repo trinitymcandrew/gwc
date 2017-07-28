@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<style>
+
+
+h1 {
+	background-color: white;
+	}
+
+body {
+	background-image: url("70.jpg");
+	}
+
+.center {
+	text-align: center;
+	}
+
+</style>
+
+
+
+<script>
+
+function tr() {
+	var str=document.getElementById("monkey").value;
+	var inUD="";
+	
+for(var z=0;z<str.length;z++){
+	var myChar= str.charAt(z);
+	if(myChar=="a"||myChar=="e"||myChar=="i"||myChar=="o"||myChar=="u"){
+	inUD=inUD + "ub";
+	}
+	
+	inUD=inUD+str.charAt(z);
+}
+	
+	document.getElementById("result").innerHTML= inUD;
+	
+}
+</script>
+
+<body>
+<div class="center">
+<h1 style=color:#b36b00;"> Ubbi Dubbi Translator</h1>
+<input type="text" id="monkey"><button type="button" onclick="tr()">Translate</button>
+<p id="result"></p>
+</div>
+
+</body>
+</html>
