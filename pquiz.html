@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<style>
+
+h3 {
+   color: white;
+   text-align: center;
+}
+
+
+h1 {
+	color:  #37562c;
+	text-align: center;
+}
+
+body {
+	background-image: url("90bck.jpg");
+    text-align: center;
+}
+
+img {
+    float: left;
+}
+
+div.gif {
+	float: right;
+}
+
+</style>
+
+<script>
+    
+function myFunction() {
+    
+    var ppg= 0;
+    var bb= 0;
+    var rug= 0;
+    if(document.getElementById('ppg1').checked){
+    ppg++;
+    }
+    else if(document.getElementById('b1').checked){
+    bb++;
+    }
+    else if(document.getElementById('r1').checked){
+    rug++;
+    }
+   	 
+
+    if(document.getElementById('r2').checked){
+    rug++;
+    }
+    else if(document.getElementById('ppg2').checked){
+    ppg++;
+    }
+    else if(document.getElementById('b2').checked){
+    bb++;
+    }
+
+
+    if(document.getElementById('b3').checked){
+    bb++;
+    }
+    else if(document.getElementById('r3').checked){
+    rug++;
+    }
+    else if(document.getElementById('ppg3').checked){
+    ppg++;
+    }
+
+
+
+    if(document.getElementById('ppg4').checked){
+    ppg++;
+    }
+    else if(document.getElementById('r4').checked){
+    rug++;
+    }
+    else if(document.getElementById('b4').checked){
+    bb++;
+    }
+
+
+    if (ppg> bb && ppg> rug){
+    document.getElementById('girl').innerHTML="You are the Powerpuff Girls! You are intelligent and maybe you even want to save the world one day!";
+}
+    else if(bb> ppg && bb> rug){
+    document.getElementById('girl').innerHTML="You got Beavis & Butt-Head! You are a careless and chilled back kind of person. Keep on rockin'!";
+}
+
+    else{
+    document.getElementById('girl').innerHTML="You got Rugrats! You are a child at heart and never want to grow up even if that means eating frosted animal crackers all day!";
+}    
+}
+</script>
+<body>
+<div class="center">
+<h1><ins>What 90's Cartoon Are You?<ins></h1>
+
+
+<h3>What's Your Favorite Color?</h3>
+ 
+  <input type="radio" id="ppg1" name="color">Pink<br>
+  <input type="radio" id="b1" name="color">Yellow<br>
+  <input type="radio" id="r1" name="color">Blue<br>
+
+<h3>Which One Would You Eat Out Of All Of These?</h3>
+
+  <input type="radio" id="r2" name="food"> Frosted Animal Crackers<br>
+  <input type="radio" id="ppg2" name="food"> Popcorn<br>
+  <input type="radio" id="b2" name="food"> Nachos<br>
+
+<img src="gameboy.jpg" width="150" height="200">
+<div class="gif"><img src="source.gif" width="150" height="200"></div>
+
+<h3>What Do You Want To Do In Life?</h3>
+
+  <input type="radio" id="b3" name="life"> Chill & Relax<br>
+  <input type="radio" id="r3" name="life"> Never Grow Up<br>
+  <input type="radio" id="ppg3" name="life"> Save the World!<br>
+
+<h3>How Would You Describe Yourself?</h3>
+  <input type="radio" id="ppg4" name="des"> Intelligent<br>
+  <input type="radio" id="r4" name="des"> Child at Heart<br>
+  <input type="radio" id="b4" name="des"> Carefree<br>
+
+<br>
+
+
+  <button onclick="myFunction()">Submit Your Answers</button>
+  <p id="girl"></p>
+
+</body>
+</html>
